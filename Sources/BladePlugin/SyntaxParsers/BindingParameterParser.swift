@@ -16,7 +16,6 @@ enum BindingParameterParser {
         }
 
         let variant: BindingParameter.Variant = switch typeSyntax.name.text {
-            case "Lazy": .lazy
             default: .instance
         }
 
@@ -46,11 +45,6 @@ enum BindingParameterParser {
         switch variant {
         case .instance:
             return typeSyntax.description
-        case .lazy:
-            guard let wrappedType = typeSyntax.genericArgumentClause?.arguments.first?.description.trimmed() else {
-                return nil
-            }
-            return wrappedType
         }
     }
 }

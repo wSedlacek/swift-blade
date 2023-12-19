@@ -22,16 +22,6 @@ extension VariableDeclSyntax {
         )
     }
 
-    static func privateLazyVar(name: String, initializer: String) -> VariableDeclSyntax {
-        VariableDeclSyntax.variable(
-            modifiers: [.private, .lazy],
-            specifier: .var,
-            name: name,
-            type: nil,
-            initializer: initializer
-        )
-    }
-
     private static func variable(
         modifiers: [Keyword],
         specifier: Keyword,

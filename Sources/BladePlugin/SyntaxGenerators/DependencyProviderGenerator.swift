@@ -148,7 +148,6 @@ private extension Binding {
             parameterValueExpression: { parameter in
                 switch parameter.variant {
                 case .instance: "\(parameter.name).get()"
-                case .lazy: "Lazy { [\(parameter.name)] in \(parameter.name).get() }"
                 }
             }
         )
@@ -160,7 +159,6 @@ private extension Binding {
             parameterValueExpression: { parameter in
                 switch parameter.variant {
                 case .instance: "\(parameter.toDependencyResolutionExpression()).get()"
-                case .lazy: "Lazy { \(parameter.toDependencyResolutionExpression()).get() }"
                 }
             }
         )

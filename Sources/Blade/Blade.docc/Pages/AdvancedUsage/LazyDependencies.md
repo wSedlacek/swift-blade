@@ -1,4 +1,4 @@
-#  Lazy Dependencies
+#  Lazy Dependencies -- BROKEN
 
 Delaying dependency initialization until absolutely necessary.
 

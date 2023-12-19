@@ -1,7 +1,6 @@
 struct BindingParameter {
     enum Variant {
         case instance
-        case lazy
     }
 
     let attributes: BindingParameterAttributes
